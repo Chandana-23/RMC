@@ -1,0 +1,29 @@
+.con1{
+    display: block;
+    text-align: center;
+}
+
+.about{
+    background-color: black;
+    color: white;
+}
+
+.data{
+    background-color: lightblue;
+    border-radius: 10px 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.contact{
+    background-color: grey;
+    color: white;
+}
+.join{
+    background-color: lightcoral;
+    color: white;
+}
+.arrow{
+    float: right;
+}
+
