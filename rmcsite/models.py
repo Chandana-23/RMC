@@ -10,3 +10,9 @@ class Query(models.Model):
     email = models.EmailField(max_length=254)
     subject = models.CharField(max_length=150)
     query = models.TextField()
+
+class Team(models.Model):
+    name = models.CharField(max_length=150)
+    role = models.CharField(max_length=150)
+    link = models.TextField()
+    image = models.ImageField(upload_to="media")

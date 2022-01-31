@@ -10,89 +10,162 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/style.css' %}" type="text/css">
-    <title>RMC</title>
+    <title>RAMANUJAN MATHS CLUB</title>
 </head>
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid d-block ">
-          <a class="navbar-brand" href="#"><h1 class="text-center text-weight-bold">RAMANUJAN MATHS CLUB</h1>
-          <blockquote class="text-center text-weight-bold">Journey towards infinity</blockquote></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">RAMANUJAN MATHS CLUB</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="d-flex justify-content-center collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
-              <a class="nav-link" href="#about">ABOUT</a>
-              <a class="nav-link" href="#gallery">GALLERY</a>
-              <a class="nav-link" href="#facts">FACTS OF CLUB</a>
-              <a class="nav-link" href="#contact">CONTACT</a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">RAMANUJAN MATHS CLUB</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#facts">FACTS OF CLUB</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </li>
             </div>
           </div>
         </div>
       </nav>
+
     <!-- Intro video -->
-    <div class="container con1">
-        <h1 class="text-center">What is RMC?</h1>
-        <iframe width="fit-content" height="315" src="https://www.youtube.com/embed/D4mNAzQ1jjw?start=1005&end=1019" title="RMC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <!-- Gallery -->
-    <div class="container gallery" id="gallery">
-        <h1 class="font-weight-bold text-center">Gallery</h1>
-        <div>
-            {% for e in events %}
-            <h1>{{e.event_name}}</h1>
-            <p>{{media}}/{{e.event_img}}</p>
-            <img src="{{media}}/{{e.event_img}}"/>
-            {% endfor %}
+    <div class="container p-5">
+        <div class="container p-5">
+            <h1 class="text-center">What is RMC?</h1>
+        </div>
+        <div class="container d-flex p-3 justify-content-center col">
             
+            <iframe  class="w-100" height="500" src="https://www.youtube.com/embed/D4mNAzQ1jjw?start=1005&end=1019" title="RMC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
+
     <!-- About -->
-    <div class="container p-4 about" id="about">
+    <div class="container p-5 about" id="about">
         <h1 class="font-weight-bold text-center">ABOUT US</h1>
         <blockquote class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima explicabo ab recusandae porro obcaecati saepe aliquid expedita, ipsam, debitis laudantium laborum aperiam dolorum fugit earum quaerat? Doloremque, repudiandae, consequatur assumenda nulla nam rerum consectetur reiciendis nihil similique quod dolor reprehenderit ratione accusamus blanditiis cum corrupti molestias quis? Esse quae impedit mollitia. Vel est asperiores similique placeat? Maxime, voluptates sunt? Neque?</blockquote>
         <div class="row">
-            <div class="col-sm text-center  display-5">
+            <div class="col-sm text-center display-5">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, nihil!
             </div>
             <div class="col-sm text-muted float-left ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquam in cum? Deserunt atque ex fugiat rem iusto consequuntur molestiae odio natus quam ipsa aut eius, sunt necessitatibus aliquid maxime beatae a, tempora modi voluptate tenetur? Harum quia, saepe laborum placeat rem exercitationem qui, ab, pariatur labore neque enim velit sequi veniam vitae tempore nihil iusto perferendis excepturi quidem at maiores expedita minima? Excepturi nostrum voluptatibus, vel ratione sapiente rem dolore provident eius cumque? Porro alias saepe voluptate eveniet quos quidem incidunt ipsa aliquam culpa consequuntur illo eos, doloremque iusto dolor labore velit esse ratione modi architecto dolores repellendus. Quam.</div>
         </div>
     </div>
+    <!-- Gallery -->
+    <div id="gallery" class="container p-5">
+        <h1 class="font-weight-bold text-center">Gallery</h1>
+        <div class="row p-5">
+            {% for e in events %}
+            <div class="d-flex justify-content-center col-sm-3 col-6">
+                <img class="img-thumbnail " data-toggle="tooltip"
+                data-placement="top" title="{{e.event_name}}" src="{{e.event_img.url}}" alt="{{e.event_name}}" width="auto"/>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     <!-- Facts of club -->
-    <div class="m-3 d-block" id="facts">
+    <div class="facts container text-center d-block p-5" id="facts">
         <h2 class="font-weight-bold text-center">Facts of College-Club</h2>
-        <div class="row m-2 p-2 text-center d-flex justify-content-center">
-            <div class="col data">
+        <div class="row text-center d-flex justify-content-center">
+            <div class="col ">
                 <h1>50+</h1>
                 <h2>Workshops</h2>
             </div>
-            <div class="col data">
+            <div class="col ">
                 <h1>50+</h1>
                 <h2>Workshops</h2>
             </div>
-            <div class="col data">
+            <div class="col ">
                 <h1>50+</h1>
                 <h2>Workshops</h2>
             </div>
-            <div class="col data">
+            <div class="col ">
                 <h1>50+</h1>
                 <h2>Workshops</h2>
             </div>
-            <div class="col data">
+            <div class="col ">
                 <h1>50+</h1>
                 <h2>Workshops</h2>
             </div>
         </div>
     </div>
+
+<!-- Team -->
+<section class="d-block text-center team container p-5" id="team">
+    <h1>Team</h1>
+<div class="wrapper-carousel-fix">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner p-2" role="listbox">
+        {% for i in team %}
+        {% if forloop.counter == 1 %}
+        <div class="carousel-item active">
+          <div class="testimonial">
+            <div class="avatar mx-auto mb-4">
+              <img src="{{i.image.url}}" class="rounded-circle img-fluid" height="200" width="200"
+                alt="{{i.name}}">
+            </div>
+            <h4 class="font-weight-bold">{{i.name}}</h4>
+            <h6 class="font-weight-bold my-3">{{i.role}}</h6>
+            
+          </div>
+        </div>
+        {% else %}
+        <div class="carousel-item">
+          <div class="testimonial">
+            <div class="avatar mx-auto mb-4">
+              <img width="200" src="{{i.image.url}}" class="rounded-circle img-fluid"
+                alt="{{i.name}}">
+            </div>
+            <h4 class="font-weight-bold">{{i.name}}</h4>
+            <h6 class="font-weight-bold my-3">{{i.role}}</h6>
+            
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
     <!-- interested to join -->
-    <div class="container con1 p-3 join">
+    <div class="container d-block text-center p-3  join">
         <h1 class="font-weight-bold">Interested in becoming a partner?</h1>
         <button class="btn btn-danger"><a target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScrBcp5XU9SSMgMCWWiF7tsJkiy6nGslWrmHvWH8X7l9D-B6A/viewform?usp=sf_link' class="nav-link text-white">LET US KNOW!</a></button>
     </div>
+
     <!-- Contact -->
-    <div class="container con1 contact" id="contact">
+    <div class="container d-block text-center p-5 contact" id="contact">
         <h1 class="font-weight-bold">CONTACT</h1>
         <form class="m-2 p-2" method="post" action="query">
             {% csrf_token %}
@@ -103,10 +176,11 @@
             <input type="submit" value="Send" class="btn btn-success">
         </form>
     </div>
+
     <!-- Social Profile -->
-    <div class="container p-3">
+    <div class="container p-5">
         <div class="row d-flex text-center p-2">
-            <div class="col p-2">
+            <div class="col-12 col-sm-6 col-md-3 p-2">
                 <i class="fas fa-map-marker-alt fa-2x"></i>
                 <br/>
                 CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY
@@ -115,25 +189,22 @@
                 <br/>
                 <a class="text-decoration-none" href="www.cbit.ac.in">www.cbit.ac.in</a>
             </div>
-            <div class="col p-2">
+            <div class="col-12 col-sm-6 col-md-3 p-2">
                 <i class="fas fa-envelope-open fa-2x"></i><br>
                 <a class="text-decoration-none" href='mailto:rmc.cbit@gmail.com'>rmc.cbit@gmail.com</a>
             </div>
-            <div class="col p-2">
+            <div class="col-12 col-sm-6 col-md-3 p-2">
                 <i class="fas fa-phone-square-alt fa-2x"></i><br/>
-                +91 9346316863<br/>+91 9951715647
+                +91 93463 16863<br/>+91 99517 15647
             </div>
-            <div class="col p-2">
+            <div class="col-12 col-sm-6 col-md-3 p-2">
                 <a class="text-black" href='#'><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a class="text-black" href="https://www.instagram.com/rmc.cbit/"><i class="fab fa-instagram-square fa-2x"></i></a>
                 <a class="text-black" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
         </div>
     </div>
-    <div class="arrow">
-        <a href='#'><i class="fas fa-arrow-alt-circle-up fa-5x"></i></a>
     </div>
-    
     {% block content %}
     {% endblock %}
 </body>

@@ -2,16 +2,15 @@ from django import http
 from django.shortcuts import redirect, render
 from django.http import HttpResponseRedirect
 
-from rmcsite.models import Gallery, Query
+from rmcsite.models import Gallery, Query, Team
 
 # Create your views here.
 def home(request):
+    l=[]
     events = Gallery.objects.all()
-    print(events)
-    return render(request,'base.html',{'events':events})
+    team = Team.objects.all()
+    return render(request,'base.html',{'events':events,'team':team})
 
-def cast(request):
-    return render(request,'cast.html')
 
 def query(request):
     if request.method == 'POST':
