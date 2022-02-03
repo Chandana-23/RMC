@@ -13,20 +13,25 @@
     <title>RAMANUJAN MATHS CLUB</title>
 </head>
 <body>
+
     <!-- Header -->
     <nav class="navbar navbar-light bg-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">RAMANUJAN MATHS CLUB</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <a class="navbar-brand m-auto text-center d-block" href="#">RAMANUJAN MATHS CLUB</a>
+              <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="rmc_logo">
+            </a>
+        </div>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header ">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">RAMANUJAN MATHS CLUB</h5>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">HOME</a>
                 </li>
@@ -39,7 +44,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#facts">FACTS OF CLUB</a>
                 </li>
-                
                 <li class="nav-item">
                     <a class="nav-link" href="#team">TEAM</a>
                 </li>
@@ -53,11 +57,10 @@
 
     <!-- Intro video -->
     <div class="container p-5">
-        <div class="container p-5">
+        <div class="container p-3">
             <h1 class="text-center">What is RMC?</h1>
         </div>
         <div class="container d-flex p-3 justify-content-center col">
-            
             <iframe  class="w-100" height="500" src="https://www.youtube.com/embed/D4mNAzQ1jjw?start=1005&end=1019" title="RMC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
@@ -76,19 +79,19 @@
     <!-- Gallery -->
     <div id="gallery" class="container p-5">
         <h1 class="font-weight-bold text-center">Gallery</h1>
-        <div class="row p-5">
+        <div class="row ">
             {% for e in events %}
-            <div class="d-flex justify-content-center col-sm-3 col-6">
+            <div class="d-flex justify-content-center col-sm-6 col-md-4 col-lg-3 col-12">
                 <img class="img-thumbnail " data-toggle="tooltip"
-                data-placement="top" title="{{e.event_name}}" src="{{e.event_img.url}}" alt="{{e.event_name}}" width="auto"/>
+                data-placement="top" title="{{e.event_name}}" src="{{e.event_img.url}}" alt="{{e.event_name}}" width="300"/>
             </div>
             {% endfor %}
         </div>
     </div>
     <!-- Facts of club -->
     <div class="facts container text-center d-block p-5" id="facts">
-        <h2 class="font-weight-bold text-center">Facts of College-Club</h2>
-        <div class="row text-center d-flex justify-content-center">
+        <h2 class="font-weight-bold text-center p-3">Facts of College-Club</h2>
+        <div class="row text-center d-flex justify-content-center p-3">
             <div class="col ">
                 <h1>50+</h1>
                 <h2>Workshops</h2>
@@ -159,7 +162,7 @@
 </section>
 
     <!-- interested to join -->
-    <div class="container d-block text-center p-3  join">
+    <div class="container d-block text-center p-5  join">
         <h1 class="font-weight-bold">Interested in becoming a partner?</h1>
         <button class="btn btn-danger"><a target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScrBcp5XU9SSMgMCWWiF7tsJkiy6nGslWrmHvWH8X7l9D-B6A/viewform?usp=sf_link' class="nav-link text-white">LET US KNOW!</a></button>
     </div>
