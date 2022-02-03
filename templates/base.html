@@ -20,8 +20,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">
-              <a class="navbar-brand m-auto text-center d-block" href="#">RAMANUJAN MATHS CLUB</a>
+            <a class="navbar-brand" href="#home">
+              <a class="navbar-brand m-auto text-center d-block" href="#home">RAMANUJAN MATHS CLUB</a>
               <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="rmc_logo">
             </a>
         </div>
@@ -33,7 +33,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                  <a class="nav-link active" aria-current="page" href="#home">HOME</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#about">ABOUT</a>
@@ -83,7 +83,7 @@
             {% for e in events %}
             <div class="d-flex justify-content-center col-sm-6 col-md-4 col-lg-3 col-12">
                 <img class="img-thumbnail " data-toggle="tooltip"
-                data-placement="top" title="{{e.event_name}}" src="{{e.event_img.url}}" alt="{{e.event_name}}" width="300"/>
+                data-placement="top" title="{{e.event_name}}" src="{{e.event_img.url}}" alt="{{e.event_name}}" width="auto" height="auto"/>
             </div>
             {% endfor %}
         </div>
@@ -130,8 +130,10 @@
                 alt="{{i.name}}">
             </div>
             <h4 class="font-weight-bold">{{i.name}}</h4>
-            <h6 class="font-weight-bold my-3">{{i.role}}</h6>
-            
+            <div class="d-flex flex-wrap align-content-center justify-content-center">
+              <h6 class="font-weight-bold d-inline justify-content-center p-2">{{i.role}}</h6>
+              <a class="text-black" href="{{i.link}}"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
           </div>
         </div>
         {% else %}
@@ -142,7 +144,10 @@
                 alt="{{i.name}}">
             </div>
             <h4 class="font-weight-bold">{{i.name}}</h4>
-            <h6 class="font-weight-bold my-3">{{i.role}}</h6>
+            <div class="d-flex flex-wrap align-content-center justify-content-center">
+              <h6 class="font-weight-bold d-inline justify-content-center p-2">{{i.role}}</h6>
+              <a class="text-black" href="{{i.link}}"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
             
           </div>
         </div>
